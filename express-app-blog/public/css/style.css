@@ -1,0 +1,11 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+header {
+  background-color: #ddd;
+}
+header a {
+  color: #000;
+}

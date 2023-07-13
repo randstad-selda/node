@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= metaTitle %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <h1><%= pageTitle %></h1>
+    <p><%= pageContent %></p>
+    <h2>Lista articoli</h2>
+    <% if(typeof articles !== "undefined" && articles.length > 0) { %>
+    <ul>
+      <% articles.forEach(function(article){ %>
+      <li>
+        <h3><%= article.title %></h3>
+        <p><%= article.content %></p>
+      </li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+    <h2>Non ci sono articoli</h2>
+    <% } %>
+  </body>
+</html>
